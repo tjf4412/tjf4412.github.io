@@ -37,6 +37,22 @@ body { margin: 40px; font-size: 1.2em;	font-family: arial; background-color: #13
 	color: #2B2C28;
 }
 
+a:link{
+    color: #45503B;  
+}
+
+a:visited{
+    color: #A0A0A0; 
+}
+
+a:hover{
+    color: #A0A0A0;  
+}
+
+a:active{
+    color: #A0A0A0;
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
@@ -71,22 +87,6 @@ body { margin: 40px; font-size: 1.2em;	font-family: arial; background-color: #13
 
 .dropdown:hover .dropdown-content {
 	display: block;
-}
-
-a:link{
-    color: #45503B;  
-}
-
-a:visited{
-    color: #A0A0A0; 
-}
-
-a:hover{
-    color: #A0A0A0;  
-}
-
-a:active{
-    color: #A0A0A0;
 }
 
 .box {
