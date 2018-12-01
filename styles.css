@@ -1,0 +1,218 @@
+body { margin: 40px; font-size: 1.2em;	font-family: arial; background-color: #131515;}
+.header{grid-area: header;}
+.home{grid-area: home;}
+.courses{grid-area: courses;}
+.about{grid-area: about;}
+.products{grid-area: products;}
+.endorsements{grid-area: endorsements;}
+.legal{grid-area: legal;}
+.sidebar{grid-area: sidebar; min-width: 185px;}
+.content{grid-area: content; min-height: 900px;}
+.footer{grid-area: footer; text-align: center; font-size: 14px;}
+
+.button {
+	background-color: #2B2C28;
+	color: #A0A0A0;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	height: 75px;
+	font-size: 20px;
+	padding: 1em;
+	margin: 0;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #45503B;
+}
+
+.button:hover {
+	background-color: #A0A0A0;
+	color: #2B2C28;
+}
+
+.button:focus {
+    background-color: #A0A0A0;
+	color: #2B2C28;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	height: 75px;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+
+.dropdown-content a {
+	display: block;
+	background-color: #2B2C28;
+	color: #A0A0A0;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #45503B;
+}
+
+.dropdown-content a:hover {
+	background-color: #A0A0A0;
+	color: #2B2C28;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+a:link{
+    color: #45503B;  
+}
+
+a:visited{
+    color: #A0A0A0; 
+}
+
+a:hover{
+    color: #A0A0A0;  
+}
+
+a:active{
+    color: #A0A0A0;
+}
+
+.box {
+	background-color: #2B2C28;
+	color: #A0A0A0;
+	padding: 10px;
+	margin: 0;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #45503B;
+}
+
+.header, .footer {
+	color: #A9B18F;
+	font-variant: small-caps;
+}
+
+.video {
+    display: block;
+    margin: 0 auto;
+}
+
+.paragraph {
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.indent{
+    text-indent: 40px;
+}
+
+.hangingindent {
+    padding-left: 22px;
+    text-indent: -22px;
+}
+
+.center{
+    text-align: center;
+}
+
+.centering{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacing{
+	padding: 0.8em;
+}
+
+.current {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.notcurrent {
+    text-decoration: none;
+}
+
+h1{
+    display: inline-block;
+}
+
+.img {
+    height: 15%;
+    width: 15%;
+}
+
+.imglrg {
+    height: 75%;
+    width: 75%;
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 675px;
+	grid-template-areas:
+	"header"
+	"home"
+	"courses"
+	"about"
+	"products"
+	"endorsements"
+	"legal"
+	"sidebar"
+	"content"
+	"footer"
+}
+
+@media only screen and (min-width: 600px)  {
+	.wrapper {
+	grid-template-columns: auto auto;
+	grid-template-areas:
+		"header header"
+		"home courses"
+		"about products"
+		"endorsements legal"
+		"sidebar sidebar"
+		"content content"
+		"footer footer";
+	}
+}
+
+@media only screen and (min-width: 950px)   {
+	.wrapper {
+  	grid-gap: 10px;
+		grid-template-columns: 250px auto auto auto;
+		grid-template-areas:
+		"header header  header header"
+		"sidebar home courses  about"
+		"sidebar products endorsements legal"
+		"sidebar content content content"
+		"footer footer footer footer";
+    }
+}
+
+@media only screen and (min-width: 1100px)   {
+	.wrapper {
+  	grid-gap: 10px;
+		grid-template-columns: 300px auto auto auto auto auto auto;
+		grid-template-areas:
+		"header header  header  header header header header"
+		"sidebar home courses  about products endorsements legal"
+		"sidebar content content content content content content"
+		"footer  footer  footer footer footer footer footer";
+    }
+}
