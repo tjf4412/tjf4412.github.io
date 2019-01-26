@@ -1,4 +1,4 @@
-body { margin: 40px; font-size: 1.2em;	font-family: arial; background-color: #131515;}
+body { margin: 40px; font-size: 20px;	font-family: arial; background-color: #131515;}
 .header{grid-area: header;}
 .home{grid-area: home;}
 .courses{grid-area: courses;}
@@ -8,56 +8,48 @@ body { margin: 40px; font-size: 1.2em;	font-family: arial; background-color: #13
 .legal{grid-area: legal;}
 .sidebar{grid-area: sidebar; min-width: 185px;}
 .content{grid-area: content; min-height: 900px;}
-.footer{grid-area: footer; text-align: center; font-size: 14px;}
+.footer{grid-area: footer; text-align: center; font-size: .7em;}
 
-.button {
+.box , button, .dropdown-content a{
 	background-color: #2B2C28;
 	color: #A0A0A0;
-	text-align: center;
-	text-decoration: none;
-	width: 100%;
-	height: 75px;
-	font-size: 20px;
 	padding: 1em;
 	margin: 0;
-	cursor: pointer;
-	transition-duration: 0.4s;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 0.1em;
 	border-color: #45503B;
 }
 
-.button:hover {
+.button, .dropdown-content a {
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.button {
+	width: 100%;
+	height: 4em;
+	transition: all 0.4s;
+}
+
+.button:hover, .button:focus {
 	background-color: #A0A0A0;
 	color: #2B2C28;
 }
 
-.button:focus {
-    background-color: #A0A0A0;
-	color: #2B2C28;
-}
-
-a:link{
+a:link {
     color: #45503B;  
 }
 
-a:visited{
+a:visited, a:hover, a:active {
     color: #A0A0A0; 
 }
-
-a:hover{
-    color: #A0A0A0;  
-}
-
-a:active{
-    color: #A0A0A0;
-}
-
 
 .dropdown {
 	position: relative;
 	display: inline-block;
-	height: 75px;
+	height: 4em;
 }
 
 .dropdown-content {
@@ -68,17 +60,7 @@ a:active{
 
 .dropdown-content a {
 	display: block;
-	background-color: #2B2C28;
-	color: #A0A0A0;
-	text-align: center;
-	font-size: 20px;
-	padding: 10px;
-	margin: 0;
-	cursor: pointer;
-	transition-duration: 0.4s;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #45503B;
+	transition: all .4s;
 }
 
 .dropdown-content a:hover {
@@ -90,16 +72,6 @@ a:active{
 	display: block;
 }
 
-.box {
-	background-color: #2B2C28;
-	color: #A0A0A0;
-	padding: 10px;
-	margin: 0;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #45503B;
-}
-
 .header, .footer {
 	color: #A9B18F;
 	font-variant: small-caps;
@@ -107,49 +79,15 @@ a:active{
 
 .video {
     display: block;
-    margin: 0 auto;
+    margin: auto auto;
+    width: 50vw;
+    height: auto;
 }
 
-.paragraph {
-    font-size: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.indent{
-    text-indent: 40px;
-}
-
-.hangingindent {
-    padding-left: 22px;
-    text-indent: -22px;
-}
-
-.center{
-    text-align: center;
-}
-
-.centering{
+.centermedia {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.spacing{
-	padding: 0.8em;
-}
-
-.current {
-    font-weight: bolder;
-    text-decoration: underline;
-}
-
-.notcurrent {
-    text-decoration: none;
-}
-
-h1{
-    display: inline-block;
 }
 
 .img {
@@ -162,10 +100,42 @@ h1{
     width: 75%;
 }
 
+h1 {
+    display: inline-block;
+}
+
+.paragraph {
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-indent: 40px;
+}
+
+.hangingindent {
+    padding-left: 22px;
+    text-indent: -22px;
+}
+
+.center {
+    text-align: center;
+}
+
+.spacing {
+	padding: 0.8em;
+}
+
+.current {
+    font-weight: bolder;
+}
+
+.notcurrent {
+    text-decoration: none;
+}
+
 .wrapper {
 	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 675px;
+	grid-gap: .5em;
+	grid-template-columns: auto;
 	grid-template-areas:
 	"header"
 	"home"
@@ -176,10 +146,10 @@ h1{
 	"legal"
 	"sidebar"
 	"content"
-	"footer"
+	"footer";
 }
 
-@media only screen and (min-width: 600px)  {
+@media only screen and (max-width: 950px)  {
 	.wrapper {
 	grid-template-columns: auto auto;
 	grid-template-areas:
@@ -191,6 +161,10 @@ h1{
 		"content content"
 		"footer footer";
 	}
+    
+    .video{
+        width: 75vw;
+    }
 }
 
 @media only screen and (min-width: 950px)   {
