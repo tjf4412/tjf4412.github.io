@@ -9,8 +9,9 @@ body { margin: 40px; font-size: 20px;	font-family: arial; background-color: #131
 .sidebar{grid-area: sidebar; min-width: 185px;}
 .content{grid-area: content; min-height: 900px;}
 .footer{grid-area: footer; text-align: center; font-size: .7em;}
+.about, .endorsements{position: relative; z-index: 1;}
 
-.box , button, .dropdown-content a{
+.box, button, .dropdown-content a{
 	background-color: #2B2C28;
 	color: #A0A0A0;
 	padding: 1em;
@@ -54,10 +55,9 @@ a:visited, a:hover, a:active {
 
 .dropdown-content {
 	display: block;
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-1.5em);
-    z-index: 1;
 	position: absolute;
 	width: 100%;
     transition: visibility 0s, opacity .3s ease-in, transform 0.4s ease-out;
@@ -74,8 +74,8 @@ a:visited, a:hover, a:active {
 }
 
 .dropdown:hover .dropdown-content {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
     transform: translateY(0em);
 }
 
