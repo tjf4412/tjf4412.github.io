@@ -39,11 +39,7 @@ body { margin: 40px; font-size: 20px;	font-family: arial; background-color: #131
 	color: #2B2C28;
 }
 
-a:link {
-    color: #45503B;  
-}
-
-a:visited, a:hover, a:active {
+a:link, a:visited, a:hover, a:active {
     color: #A0A0A0; 
 }
 
@@ -57,7 +53,6 @@ a:visited, a:hover, a:active {
 	display: block;
     opacity: 0;
     visibility: hidden;
-    color: #A0A0A0;
     transform: translateY(-1.5em);
 	position: absolute;
 	width: 100%;
