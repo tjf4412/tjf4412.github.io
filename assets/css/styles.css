@@ -57,6 +57,7 @@ a:visited, a:hover, a:active {
 	display: block;
     opacity: 0;
     visibility: hidden;
+    color: #A0A0A0;
     transform: translateY(-1.5em);
 	position: absolute;
 	width: 100%;
