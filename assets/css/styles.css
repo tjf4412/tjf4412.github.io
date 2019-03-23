@@ -11,7 +11,7 @@ body { margin: 40px; font-size: 20px;	font-family: arial; background-color: #131
 .footer{grid-area: footer; text-align: center; font-size: .7em;}
 .about, .endorsements{position: relative; z-index: 1;}
 
-.box, button, .dropdown-content a{
+.box, .button, .dropdown-content a{
 	background-color: #2B2C28;
 	color: #A0A0A0;
 	padding: 1em;
@@ -51,12 +51,12 @@ a:link, a:visited, a:hover, a:active {
 
 .dropdown-content {
 	display: block;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-1.5em);
+  	opacity: 0;
+  	visibility: hidden;
+  	transform: translateY(-1.5em);
 	position: absolute;
 	width: 100%;
-    transition: visibility 0s, opacity .3s ease-in, transform 0.4s ease-out;
+  	transition: visibility 0s, opacity 0.3s ease-in, transform 0.4s ease-out;
 }
 
 .dropdown-content a {
@@ -70,7 +70,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .dropdown:hover .dropdown-content {
-    opacity: 1;
+	opacity: 1;
     visibility: visible;
     transform: translateY(0em);
 }
