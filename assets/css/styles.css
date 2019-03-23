@@ -34,13 +34,13 @@ body { margin: 40px; font-size: 20px;	font-family: arial; background-color: #131
 	transition: all 0.4s;
 }
 
-.button:hover, .button:focus {
+.button:hover {
 	background-color: #A0A0A0;
 	color: #2B2C28;
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: #A0A0A0; 
+    color: #A0A0A0;
 }
 
 .dropdown {
@@ -164,7 +164,7 @@ h1 {
 		"content content"
 		"footer footer";
 	}
-    
+
     .video{
         width: 75vw;
     }
